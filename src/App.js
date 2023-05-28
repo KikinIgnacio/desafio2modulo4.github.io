@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Login from './componentes/login/Login.jsx';
+import Alertaa from './componentes/alertaa/Alertaa.jsx';
+import portadaDeFondo from "../src/portadaDeFondo.gif";
 
-function App() {
+const App = () => {
+  const [isMensajeEnPantalla, setisMensajeEnPantalla] = useState(null);
+
+  const mostrarResultado = (e) => {
+    setisMensajeEnPantalla(e);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ backgroundImage: `url(${portadaDeFondo})` }}>
+      <Login onSubmitForm={mostrarResultado} titulo="Bienvenido a Pet Society" texto1="Tu email abajo, por favor" texto2="Ingresa abajo tu contraseña" boton="Iniciar Sesión" />
+      {isMensajeEnPantalla !== null && (
+        <Alertaa
+          texto={isMensajeEnPantalla ? "🥳🎉 Adelante, puedes pasar 🎉🥳" : "🚫 Alto! 🚫, 🙅‍♂️ datos incorrectos, intenta de nuevo 🙅‍♂️"}
+          variant={isMensajeEnPantalla ? "success" : "danger"}
+          
+        />
+      )}
     </div>
   );
 }
 
 export default App;
+
+

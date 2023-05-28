@@ -1,0 +1,12 @@
+.alert-container {
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  .alert-message {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }

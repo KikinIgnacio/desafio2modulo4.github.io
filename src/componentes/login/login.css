@@ -1,0 +1,41 @@
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative; 
+    
+  }
+  
+  .tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:cornflowerblue;
+    border-radius: 20%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    
+  }
+ 
+  
+
+.contenedor-boton{
+    padding-top: 1rem;
+}
+
+.titulo{
+    background-color:khaki;
+    border-radius: 10%;
+    color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.textos{
+    background-color: darksalmon;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 1rem;
+}
